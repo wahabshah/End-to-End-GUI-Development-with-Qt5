@@ -8,6 +8,18 @@
 * Finally, we have slightly rewritten the SOURCES and HEADERS variable lists to account for the new file locations after we moved things around a bit
 * We add the source folder (which is where all of our code will live) to the INCLUDEPATH so that the path is searched when we use #include statements.
 
+
+To load a QML from main.cpp, the following is the scheme:- 
+>>qrc:<prefix><filename>
+We previously had a `/` prefix and a `views/main.qml` relative filename. This gave us `qrc:/views/main.qml`.
+
+A prefix of `/` isn’t terribly descriptive. As you add more and more QML files, it’s really helpful to organize them into blocks with meaningful prefixes. Having unstructured resource blocks also makes the Projects pane ugly and more difficult to navigate, as you just saw when you had to drill down through views.qrc > / > views. So, the first step is to rename the prefix from / to /views.
+
+However, with a prefix of `/views` and a relative filename of `views/main.qml`, our URL is now `qrc:/views/views/main.qml`.
+
+This is worse than it was before, and we still have a deep folder structure in views.qrc. Fortunately, we can add an alias for our file to make both of these problems go away. You can use the alias of a resource in place of the relative path, so if we assign an alias of main.qml, we can replace views/main.qml with simply main.qml, giving us `qrc:/views/main.qml`.
+
+
 # Build
 
 ```sh
