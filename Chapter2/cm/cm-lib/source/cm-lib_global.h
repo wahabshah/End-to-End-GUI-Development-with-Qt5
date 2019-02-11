@@ -3,6 +3,7 @@
 
 #include <QtCore/qglobal.h>
 #include <QObject>
+#include <QString>
 
 #if defined(CMLIB_LIBRARY)
 #  define CMLIBSHARED_EXPORT Q_DECL_EXPORT
