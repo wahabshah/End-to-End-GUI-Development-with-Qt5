@@ -4,7 +4,7 @@
 #include <cm-lib_global.h>
 namespace cm {
     namespace controllers {
-class MasterController : public QObject
+ class CMLIBSHARED_EXPORT MasterController : public QObject
 {
     Q_OBJECT
 public:
