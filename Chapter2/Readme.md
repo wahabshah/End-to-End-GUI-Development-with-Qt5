@@ -20,6 +20,14 @@ However, with a prefix of `/views` and a relative filename of `views/main.qml`, 
 This is worse than it was before, and we still have a deep folder structure in views.qrc. Fortunately, we can add an alias for our file to make both of these problems go away. You can use the alias of a resource in place of the relative path, so if we assign an alias of main.qml, we can replace views/main.qml with simply main.qml, giving us `qrc:/views/main.qml`.
 
 
+Project MESSAGE: PLATFORM_WIN
+Project MESSAGE: COMPILER_MSVC2017
+Project MESSAGE: PROCESSOR_x64
+Project MESSAGE: BUILD_RELEASE
+
+Dest path: windows/msvc2017/x64/release
+
+
 # Build
 
 ```sh

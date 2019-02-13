@@ -1,4 +1,4 @@
-Chapter1/build
-*.pro
 *.pro.user
 build*
+shadow-builds
+binaries
